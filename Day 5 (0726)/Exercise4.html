@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습</title>
+    <style>
+        * { margin: 0; padding: 0; border: 1px solid #ddd;}
+        a {text-decoration: none; color: #000; border: none;}
+        header, #content, footer, section { border-color: blue;}
+        
+
+        /* #wrap {} */
+        .inner { width: 900px; margin: 0 auto; padding: 10px 0;}
+        .clear::after { content: ""; display: block; clear: both;}
+
+        header { background-color: wheat; }
+        header .logo { float: left; }
+        header nav { float: right; }
+        .gnb { list-style: none; }
+        .gnb li { float: left; width: 100px; height: 40px;
+                  background-color: skyblue; text-align: center;
+                  line-height: 40px; margin-left: 10px;}
+        .gnb li:nth-child(1) {margin-left: 0;}
+        .gnb li:hover {background-color: tomato;}
+        .gnb li:hover a { color: #fff; }
+        
+        #content { width: 900px; margin: 10px auto; 
+                   position: relative;}
+        #content section { height: 100px; float: left; padding: 10px;
+                           box-sizing: border-box;}
+        /* .box1 { width: 422px; margin-right: 10px;}
+        .box2 { width: 422px; }
+        .box3 { width: 271.3332px; margin-right: 10px;}
+        .box4 { width: 271.3332px; margin-right: 10px;}
+        .box5 { width: 271.3332px; } */
+        .box1 { width: 445px; margin-right: 10px;}
+        .box2 { width: 445px; margin-bottom: 10px;}
+        .box3 { width: 293.33333px; }
+        .box4 { width: 293.33333px; margin: 0 10px;}
+        .box5 { width: 293.33333px;}
+        .box6 { position: absolute; width: 100px; 
+                right: -120px; top: 0; 
+                background-color: red; color: #fff;}
+        
+        footer { background-color: #ccc; text-align: center; }
+        footer .inner { height: 60px; position: relative;}
+        footer p { line-height: 56px;}
+        footer span{ width: 50px; height: 50px; background-color: red;
+                     color: #fff; 
+                     position: absolute; top: 50%; margin-top: -25px;
+                     border-radius: 50%; line-height: 50px;}
+        footer span:nth-of-type(1) { right: 130px; }
+        footer span:nth-of-type(2) { right: 70px; }
+        footer span:nth-of-type(3) { right: 10px; }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner clear">
+                <h1 class="logo">LOGO</h1>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                        <li><a href="#">menu4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="content" class="clear">
+            <section class="box1">Box1</section>
+            <section class="box2">Box2</section>
+            <section class="box3">Box3</section>
+            <section class="box4">Box4</section>
+            <section class="box5">Box5</section>
+            <section class="box6">banner</section>
+        </div>
+        <footer>
+            <div class="inner">
+                <p>Copyright.</p>
+                <span>S</span>
+                <span>N</span>
+                <span>S</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

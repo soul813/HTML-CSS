@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 속성-2D 크기변형</title>
+    <style>
+        #origin { border: 1px solid #333;float: left; margin: 50px; }
+        #origin div { width: 350px; height: 200px; 
+                      transition: all 1s ease;}
+        #origin div img { width: 100%; }
+
+        /* 좌표이동 translate */
+        /* .translate:hover { transform: translate(50px, 50px);
+                        opacity: 0.5; }
+        .translateX:hover { transform: translateX(-50px); }
+        .translateY:hover { transform: translateY(50px); } */
+
+        /* 크기변경 scale */
+        .scale:hover { transform: scale(2);
+                           opacity: 0.5; }
+        .scaleX:hover { transform: scaleX(0.5); }
+        .scaleY:hover { transform: scaleY(1.5); }
+
+
+    </style>
+</head>
+<body>
+    <div id="origin">
+        <div class="scale">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="scaleX">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="scaleY">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+</body>
+</html>

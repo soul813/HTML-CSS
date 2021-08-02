@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Sunflower:wght@300&display=swap');
+        h1 {
+            color: burlywood;
+            font-family: 'Sunflower', sans-serif;
+            font-size: 42px;
+            font-weight: normal;
+            font-style:italic;
+            text-decoration: line-through;
+            text-align: center;
+            letter-spacing: 20px;
+            word-spacing: 50px;
+            text-shadow: 3px 3px 0px rgb(69, 69, 71);
+        }
+        .textbox {
+            text-indent: 50px;
+            text-transform: capitalize;
+            line-height: 1.6;
+        }
+        h2 {
+            font-variant: small-caps;
+        }/*소문자가 대문자로 변경되고 소문자 크기에 맞추어 작게 표시*/
+        .notice{
+            font-family: 'Gugi', cursive;
+            font-size: 32px;
+            color: skyblue;
+            letter-spacing: 10px;
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+        }
+        .list{
+            list-style: none;
+            border-bottom: 2px dotted red;
+        }
+        .sub_list{
+            list-style-position: outside;
+            list-style-type: square;
+            border-left: 2px dashed blue;
+        }
+        ol{
+            list-style-type:lower-greek;
+        }
+        #wrap{
+            border: 2px solid blue;
+            width: 650px;
+            margin: 0 auto;
+            padding: 20px 50px;
+
+        }
+        .circle{
+            width: 500px;
+            height: 500px;
+            border: 3px solid orange;
+            margin: 50px 50px;
+            border-radius: 50%; 
+            text-align: center;
+            line-height: 500px;
+            box-shadow:  10px 10px 0px gray;
+        }
+        .circle2{
+            width: 500px;
+            height: 500px;
+            border: 3px solid orange;
+            margin: 50px 50px;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%; 
+            border-bottom-left-radius: 50%;
+            text-align: center;
+            line-height: 500px;
+        }
+        .dot{
+            list-style-image: url(dot.png);
+        }
+        .dot li ul{
+            list-style-type: square;
+            list-style-image:none;
+        }
+    </style>
+    <title>글자속성</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1>이지스퍼블리싱 신입 사원 모집 공고</h1>
+        <p class="notice">IT 기획, 편집 부서에서 함께 할 신입 사원을 모집합니다.</p>
+        <ul class="list">
+            <li>- 모집 직군 : 편집 기획 부서</li>
+            <li>- 직무 내용 : 도서 프로듀싱 업무 (신입 지원 가능)</li>
+            <ul class="sub_list">
+                <li>도서 기획, 편집</li>
+                <li>도서 홍보, 독자 소통</li>
+            </ul>
+            <li>- 접수 마감일 : 2021.3.6.</li>
+        </ul>
+        <p>자세한 내용은 공지 게시판을 참고하세요.</p>
+        <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Fugiat debitis labore suscipit distinctio. Quos asperiores 
+            tempore unde! Ad animi magnam corrupti eveniet voluptate ex 
+            autem nam velit aspernatur inventore! Possimus?</p>
+            <h2>Lorem ipsum dolor</h2>
+
+            <ol>
+                <li>사과</li>
+                <li>수박</li>
+                <li>복숭아</li>
+                <li>포도</li>
+            </ol>
+            <div class="circle">Circle</div>
+            <div class="circle2">Circle2</div>
+            <ul class="dot">
+                <li>1-1
+                    <ul>
+                        <li>2-1</li>
+                        <li>2-1</li>
+                    </ul>
+                </li>
+                <li>1-2</li>
+                <li>1-3</li>
+            </ul>
+
+    </div>
+
+</body>
+</html>

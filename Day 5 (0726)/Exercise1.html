@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1주차 복습</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        
+        #wrap { width: 700px; margin: 0 auto; border: 1px solid red; }
+        h1 { text-align: center; text-decoration: underline; color: blue; font-size: 42px;
+             font-family: 'Noto Sans KR', sans-serif ; 
+             font-weight: 900; font-style: italic; text-shadow: 3px 3px 5px skyblue}
+
+        .menu { list-style: none; font-size: 22px; background-color: yellow; 
+                /* text-align: center;*/ width: 549px; padding: 0; margin: 0 auto;
+                }
+        .menu li { display: inline-block; border: 1px solid #333; padding: 10px 30px; }
+        .menu li:hover {background-color: #333; color: #fff; cursor: pointer;}
+        p { border: 1px solid #333; padding: 50px; line-height: 4; }
+
+        #wrap p { background-image: url(test.jpg); background-size: 100px;}
+        #con1 { background-repeat: repeat-x;}
+        #con2 { background-repeat: no-repeat; background-position: center;}
+        #wrap #con3 { background-repeat: no-repeat; background-size: cover; 
+                background-attachment: fixed;}
+        #con4 { background-repeat: no-repeat; background-position: right bottom;}
+        
+        body { background: #ddd url(test.jpg) no-repeat right center / 200px; }
+        /* 배경색상 배경이미지경로 반복속성 고정속성 포지션 / 배경이미지사이즈  */
+
+    </style>
+</head>
+<body>
+    <h1>CSS 기본문법</h1>
+    <div id="wrap">
+        <ul class="menu">
+            <li><a href="#con1">menu01</a></li>
+            <li><a href="#con2">menu02</a></li>
+            <li><a href="#con3">menu03</a></li>
+            <li><a href="#con4">menu04</a></li>
+        </ul>
+        <div id="content">
+            <p id="con1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, 
+                earum laboriosam aperiam fuga maiores consectetur libero nemo ab accusantium,
+                iusto quisquam dolorem nihil praesentium provident alias ut repellendus. 
+                Rem, natus?</p>
+            <p id="con2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, 
+                earum laboriosam aperiam fuga maiores consectetur libero nemo ab accusantium,
+                iusto quisquam dolorem nihil praesentium provident alias ut repellendus. 
+                Rem, natus?</p>
+            <p id="con3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, 
+                earum laboriosam aperiam fuga maiores consectetur libero nemo ab accusantium,
+                iusto quisquam dolorem nihil praesentium provident alias ut repellendus. 
+                Rem, natus?</p>
+            <p id="con4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, 
+                earum laboriosam aperiam fuga maiores consectetur libero nemo ab accusantium,
+                iusto quisquam dolorem nihil praesentium provident alias ut repellendus. 
+                Rem, natus?</p>
+        <ul class="menu">
+            <li><a href="#con1">menu01</a></li>
+            <li><a href="#con2">menu02</a></li>
+            <li><a href="#con3">menu03</a></li>
+            <li><a href="#con4">menu04</a></li>
+        </ul>    
+        </div>    
+    </div>
+</body>
+</html>

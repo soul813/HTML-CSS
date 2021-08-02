@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>play state 속성 연습</title>
+    <style>
+        #wrap { width: 200px; height: 200px; margin: 100px auto; position: relative;}
+        .sticker { width: 100%; height: 100%; position: absolute; left: 0; top: 0;
+                   background: url(sticker.png) no-repeat center / cover;
+                   animation: spin 10s infinite linear;
+                   }
+        .new { font-size: 42px; color: #fff; position: absolute; left: 50%; top: 50%;
+               transform: translate(-50%, -50%);
+               }
+
+        @keyframes spin { 
+            100% { transform: rotate(1turn);}
+        }
+
+        #wrap:hover .sticker {animation-play-state: paused; }
+
+
+        .monster { width: 74px; height: 93px; overflow: hidden; margin: 50px auto;
+                   background: url(monster.png) no-repeat left center;
+                   animation: ani 0.8s steps(10) infinite;
+                   }
+
+        @keyframes ani {
+            0% { background-position: 0 center;}
+            100% { background-position: -740px center; }
+        }
+
+
+        .box { display: block; width: 384px; margin: 50px auto;
+               animation: swing 2s alternate infinite linear;
+               transform-origin: center top;
+                }
+
+        @keyframes swing {
+            0% { transform: rotate(-30deg); }
+            100% { transform: rotate(30deg); }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="sticker"></div>
+        <div class="new">NEW</div>
+    </div>
+    <div class="monster"></div>
+
+    <img src="testbox.png" alt="액자" class="box">
+</body>
+</html>

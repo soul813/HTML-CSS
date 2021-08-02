@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 속성-3D 위치변형</title>
+    <style>
+        #origin { border: 1px solid #333;float: left; margin: 50px; perspective: 500px;}
+        #origin div { width: 350px; height: 200px; 
+                      transition: all 1s ease;}
+        #origin div img { width: 100%; }
+
+        /* 좌표이동 translate */
+        .translate:hover { transform: translate(50px, 50px);
+                        opacity: 0.5; }
+        .translateX:hover { transform: translateX(-50px); }
+        .translateY:hover { transform: translateY(50px); }
+
+        .translateZ:hover {transform:translateZ( 100px)}
+        .translate3d:hover {transform:translate3d( 50px, 20px, -300px)}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="origin">
+        <div class="translate">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translateX">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translateY">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translateZ">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translate3d">
+            <img src="test.jpg" alt="배너이미지">
+        </div>
+    </div>
+</body>
+</html>

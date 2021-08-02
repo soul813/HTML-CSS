@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴바 오른쪽으로 그려지는 것</title>
+    <style>
+        .clear::after {content: ""; display: block; clear: both;}
+
+        #wrap .menu { list-style: none; }
+        #wrap .menu li { float: left; padding: 20px; font-size: 25px; position: relative;}
+/*         #wrap .menu li::after { content:""; width: 0; height: 5px; position: absolute; left: 0; bottom: 10px;
+                                background-color: mediumslateblue;
+                                transition: .5s;
+                                }
+        
+        #wrap .menu li:hover::after { width: 100%;} */
+
+        #wrap .menu li::after { content:""; width: 100%; height: 5px; position: absolute; left: 0; bottom: 10px;
+                                background-color: mediumslateblue;
+                                transform: scale(0); transform-origin: left;
+                                transition: .5s;
+                                }
+        
+        #wrap .menu li:hover::after { transform: scale(100%);}
+
+        #wrap1 .menu1 { list-style: none; }
+        #wrap1 .menu1 li { float: left; padding: 20px; font-size: 25px; position: relative;}
+        #wrap1 .menu1 li::after { content:""; width: 0; height: 5px; position: absolute; left: 0; bottom: 10px;
+                                background-color: mediumslateblue;
+                                transition: .5s;
+                                }
+        
+        #wrap1 .menu1 li:hover::after { width: 100%;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap" class="clear">
+        <ul class="menu">
+            <li>Menu01</li>
+            <li>Menu02</li>
+            <li>Menu03</li>
+            <li>Menu04</li>
+        </ul>
+    </div>
+
+    <div id="wrap1">
+        <ul class="menu1">
+            <li>Menu01</li>
+            <li>Menu02</li>
+            <li>Menu03</li>
+            <li>Menu04</li>
+        </ul>
+    </div>
+</body>
+</html>

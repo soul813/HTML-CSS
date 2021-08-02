@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타벅스 레이아웃</title>
+    <style>
+        * { margin: 0; padding: 0;}
+        a { text-decoration: none; color: #333;}
+
+        .inner { width: 900px; margin: 0 auto;}
+        .clear::after {content: ""; display: block; clear: both;}
+
+        header { padding: 10px 0; }
+        header .logo { width: 78px; margin: 0 auto; }
+        header  nav {  }
+        .gnb { list-style: none; text-align: center; width: 400px; margin: 10px auto;}
+        .gnb li { float: left; width: 100px; height: 30px; line-height: 30px;
+                  position: relative;}
+        .gnb li::after { content: "|"; color: #ccc; position: absolute; /* 보통 메뉴구분 글자는 이와 같이 코딩함. */
+                         top: -2px; right: 0; }
+        .gnb li:last-child::after {display: none;} 
+        .gnb li:hover a { color: teal; }
+
+
+        #visual { height: 300px; margin-top: 10px; 
+                  background-image: linear-gradient(to bottom,#69ccf3, #1e669f);
+                  overflow: hidden;}
+        #visual .inner { position: relative; }
+        #visual h2 { background-color: teal; color: #fff; padding: 5px 10px;
+                     position: absolute; top: 60px; left: 0; font-size: 32px; }
+        #visual p { font-size: 24px; color: #fff; position: absolute;
+                    top: 120px; left: 0; }
+        #visual .btn { position: absolute; width: 110px; height: 40px;
+                       background-color: #fff; border-radius: 5px;
+                       text-align: center; line-height: 40px;
+                       columns:#1e669f ; top: 200px; left: 0;
+                       box-shadow: 3px 3px 5px #1e669f;}
+        #visual .btn:hover {background-color: rgb(126, 223, 70);}
+        #visual img {width: 13%;}
+        #visual img:nth-of-type(1) { position: absolute; top: 30px; right: 260px;
+                                     z-index: 2; }
+        #visual img:nth-of-type(2) { position: absolute; top: 50px; right: 184px;
+                                     z-index: 1; }
+        #visual img:nth-of-type(3) { position: absolute; top: 74px; right: 115px;
+                                    z-index: 0; }
+
+        #content {padding : 10px; }
+        #content section { float: left; min-height: 100px;
+                           border: 1px solid #ccc; box-sizing: border-box;
+                           padding: 10px;}
+        #content section h3 { margin-bottom: 10px; }
+        #content section img {width: 100%;}
+        section:nth-of-type(1) { width: 445px; margin-right: 10px;}
+        section:nth-of-type(2) { width: 445px; margin-bottom: 10px;}
+        section:nth-of-type(3) { width: 293.3333px; }
+        section:nth-of-type(4) { width: 293.3333px; margin:0 10px; height: 402.42px;}
+        section:nth-of-type(5) { width: 293.3333px; height: 402.42px;}
+        section p {height: 90px; margin-bottom: 40px;}
+
+        footer { background-color: #ccc; text-align: center; padding: 10px 0;}
+        footer ul { list-style: none; width: 330px; margin: 10px auto;}
+        footer ul li { background-color: blue; width: 100px; height: 50px;
+                       float: left; text-align: center; line-height: 50px;
+                       color: #fff; margin: 0 5px;}
+        footer p { font-size: 15px;}
+        
+        .top {width: 50px; height: 50px; background-color: cornflowerblue;
+              color: #fff; border-radius: 50%; text-align: center; line-height: 50px;
+              position: fixed; right: 0; bottom: 0; margin: 0 20px 20px;
+              opacity: 0.8;}
+        html {scroll-behavior: smooth;}
+        #blank { height : 2000px;}
+              
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><img src="images/logo.jpg" alt="스벅로고"></h1>
+            <nav>
+                <ul class="gnb clear">
+                    <li><a href="#blank">회사소개</a></li>
+                    <li><a href="#footer">매장안내</a></li>
+                    <li><a href="#content">공지사항</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="visual">
+            <div class="inner">
+                <h2>STARBUKS</h2>
+                <p>나이트로 콜드브루 글라스를 드립니다.</p>
+                <a href="#" class="btn">바로가기</a>
+                <img src="images/st01.png" alt="1">
+                <img src="images/st02.png" alt="2">
+                <img src="images/st03.png" alt="3">
+            </div>
+        </div>
+        <div id="content" class="inner clear">
+            <section>
+                <h3>Store overview</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut labore animi maiores aperiam itaque voluptatum fugiat beatae quasi officia praesentium quaerat modi enim suscipit earum illo repudiandae, reprehenderit a. Iure!</p>
+                <br> 
+                <img src="images/con01.jpg" alt="">
+            </section>
+            <section>
+                <h3>Goods</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, molestiae dolorem. Temporibus autem distinctio officiis natus exercitationem aliquam, neque dolore doloremque, id facere perspiciatis ex eaque dignissimos accusamus minima magnam.</p>
+                <br>
+                <img src="images/con02.jpg" alt="">
+            </section>
+            <section>
+                <h3>Coffee</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatibus nihil, nulla earum dolorem cum? Dolores, et dolor totam excepturi qui eligendi dignissimos commodi. Repellat quod autem similique cumque quaerat.</p>
+                <img src="images/con_b01.jpg" alt="">
+            </section>
+            <section>
+                <h3>Coffe Package</h3>
+                <p></p>
+                <img src="images/con_b02.jpg" alt="">
+            </section>
+            <section>
+                <h3>Package Design</h3>
+                <p></p>
+                <img src="images/con_b03.jpg" alt="">
+            </section>
+        </div>
+        <hr>
+        <footer id="footer">
+            <ul class="clear">
+                <li>회사소개</li>
+                <li>법적공지</li>
+                <li>위치안내</li>
+            </ul>
+            <p>STARBUKS &copy;Copyright</p>
+        </footer>
+        <a href="#wrap" class="top">TOP</a>
+        <header>
+            <nav>
+                <ul class="gnb clear">
+                    <li><a href="#blank">회사소개</a></li>
+                    <li><a href="#footer">매장안내</a></li>
+                    <li><a href="#content">공지사항</a></li>
+                    <li><a href="#visual">고객센터</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="blank"></div>
+        <hr>
+    </div>
+</body>
+</html>

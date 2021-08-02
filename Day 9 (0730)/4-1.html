@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 버튼 예제2</title>
+    <style>
+        .line { width: 50px; float: right; margin: 100px 100px 0 0;}
+        .line span { width: 100%; height: 3px; background-color: #333;
+                     display: block; margin: 10px 0;
+                     }
+
+        .line span:nth-child(1) {transition: all .5s ease;}
+        .line span:nth-child(2) {transition: all .4s ease;}
+        .line span:nth-child(3) {transition: all .3s ease;}
+
+        .line:hover span {transform: rotateY(180deg);}
+
+        
+    </style>
+</head>
+<body>
+    <div class="line">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

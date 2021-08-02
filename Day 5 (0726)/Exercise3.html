@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그 연습_HTML5</title>
+    <style>
+        * { margin: 0; padding: 0; border: 1px solid #ddd;}
+        a { text-decoration: none; color: #000; border: none;}
+        .clear::after{content: ""; display: block; clear: both;}
+
+
+        #wrap { width: 800px; margin: 0 auto;}
+        .line_blue { border: 2px solid blue; padding: 10px;}
+
+        header { height: 140px;}
+        header h1 {text-align: center; text-decoration: underline;
+                   margin-bottom: 20px;}
+        .gnb { width: 408px; margin: 0 auto; overflow: hidden;}
+        .gnb li { border: 1px solid blue; width: 100px; height: 40px;
+                  line-height: 40px; text-align: center; list-style:none;
+                  float: left;}
+        .gnb li:hover { background-color: blue;}
+        .gnb li:hover a {color: #fff;}                 
+
+        #content { margin: 10px 0;}
+        #content h2 { margin-bottom: 10px;}
+        #content ul { padding: 10px; }
+        #content aside { width: 150px; float: left;  }
+        #content section { width: 400px; float: left; margin: 0 13px;}
+        #content section article { margin-bottom: 10px; }
+
+        footer { height: 100px; }
+        footer h3 { margin-bottom: 10px;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="line_blue">
+            <h1>웹문서제목</h1>
+            <nav>
+                <ul class="gnb"> <!-- gnb : global navigation bar -->
+                    <li><a href="#">menu01</a></li>
+                    <li><a href="#">menu02</a></li>
+                    <li><a href="#">menu03</a></li>
+                    <li><a href="#">menu04</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content" class="clear">
+        <!-- <main> 웹 접근성 문제로 인해서 요즘에는 main 태그를 잘 안쓰는 추세-->
+            <aside class="line_blue">
+                <h2>사이드바</h2>
+                <ul>
+                    <li>항목1</li>
+                    <li>항목2</li>
+                    <li>항목3</li>
+                    <li>항목4</li>
+                </ul>
+            </aside>
+            <section class="line_blue">
+                <h2>본문</h2>
+                <article>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 
+                    예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 
+                    개시 30일전까지 이를 의결하여야 한다.
+
+                    대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 
+                    제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론·출판에 대한 허가나 
+                    검열과 집회·결사에 대한 허가는 인정되지 아니한다.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, alias. 
+                    Perferendis dolor ducimus, deserunt sapiente molestias expedita error sequi, 
+                    tenetur rem quibusdam, delectus laudantium magni repellendus deleniti obcaecati 
+                    architecto voluptatum.</article>
+            </section>
+            <aside class="line_blue">
+                <h2>사이드바</h2>
+                <ul>
+                    <li>항목1</li>
+                    <li>항목2</li>
+                    <li>항목3</li>
+                    <li>항목4</li>
+                </ul>
+            </aside>
+        <!-- </main> -->
+        </div>
+        <footer class="line_blue">
+            <h3>Footer</h3>
+            <p>저작권정보, Copyright.</p>
+        </footer>
+    </div>
+</body>
+</html>
