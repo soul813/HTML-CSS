@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ice"></p>
+    <button onclick="test()">확인</button>
+
+    <script>
+        var price = 5000;
+        var num = 3;
+
+        var text = "아이스크림은 "+price+"원에 "+num+"개 구매했습니다. <br> 그래서 총 "+price*num+"원을 지불했습니다. <br><br>";
+        var text2 = `바닐라 아이스크림은 ${price} 원에 ${num}개 구매했습니다. 그래서 총 ${price*num}원을 지불했습니다.`;
+        document.write(text);
+        
+        function test() {
+            //document.write(text2);
+            document.getElementById('ice').innerHTML = text2;
+        }
+
+    </script>
+</body>
+</html>

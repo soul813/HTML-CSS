@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위 환산</title>
+    <style>
+        span { color: brown;}
+    </style>
+</head>
+<body>
+    <h1 id="result"></h1>
+    
+    <script>
+        let cm = prompt('cm 단위의 길이를 입력하세요!');
+        const div = 100;
+        let m = cm / div;
+        // document.getElementById('result').innerHTML = cm + "cm는 m 단위로 환산하면 " + m + "m 입니다.";
+        document.getElementById('result').innerHTML = `<span>${cm}cm</span>는 m 단위로 환산하면 <span>${m}m</span> 입니다.`;
+        
+    </script>
+
+
+</body>
+</html>
