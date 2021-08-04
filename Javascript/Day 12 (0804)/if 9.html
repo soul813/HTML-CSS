@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정체중</title>
+</head>
+<body>
+    <script>
+        //적정 체중 = (키-100)*0.9
+        let name = prompt ("이름을 입력하세요.","0");
+        let height = prompt ("본인의 키를 입력하세요.","0");
+        let weight = prompt ("본인의 체중를 입력하세요.","0");
+
+        let normal = (height-100)*0.9;
+        console.log(normal);
+        let diff = weight-normal;
+
+        if (normal-5 <= weight && weight <= normal+5) {
+            document.write (`${name}님은 ${weight}kg으로 정상 체중입니다.`);
+        } else if (normal-5 > weight) {
+            document.write (`${name}님은 ${diff+5}kg 저체중입니다.`);
+        } else if (normal+5 < weight) {
+            document.write (`${name}님은 ${diff-5}kg 과체중입니다.`);
+        } else {
+            document.write (`입력값이 잘못되었습니다. 올바른 값을 입력해 주세요.`);
+        }
+    </script>
+</body>
+</html>

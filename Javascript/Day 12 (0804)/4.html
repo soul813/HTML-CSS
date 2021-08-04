@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 출력 복습</title>
+</head>
+<body>
+    <button onclick="tik()">3x3 table 출력하기</button>
+    <div id="wrap"></div>
+    <script>
+        function tik(){
+        let table = "<table border='1'>";
+            table += "<tr>";
+            table += "<td>1-1</td>";
+            table += "<td>1-2</td>";
+            table += "<td>1-3</td>";
+            table += "</tr>";
+            table += "<tr>";
+            table += "<td>2-1</td>";
+            table += "<td>2-2</td>";
+            table += "<td>2-3</td>";
+            table += "</tr>";
+            table += "<tr>";
+            table += "<td>3-1</td>";
+            table += "<td>3-2</td>";
+            table += "<td>3-3</td>";
+            table += "</tr>";
+            table += "</table>";
+            console.log(table);
+            document.getElementById('wrap').innerHTML = table;
+            }
+    </script>
+</body>
+</html>
