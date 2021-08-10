@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #rect {width: 200px; height: 200px; background-color: yellow;}
+        #rect {width: 200px; height: 200px; background-color: yellow; transition: .5s;}
+   
     </style>
 </head>
 <body>
@@ -15,6 +16,7 @@
     <div id="rect" onclick="chShape()"></div>
 
     <script>
+        document.getElementById('rect').style.backgroundColor = "yellow"
         let num = 1;
         let a = 0;
         let b = 0;
@@ -27,25 +29,38 @@
         }
 
         function chTxt() {
-            
+            let title = document.getElementById('chText');
             if (a == 0){
-                document.getElementById('chText').textContent = "제목입니다.";
+                title.innerHTML = "제목입니다.";
                 a = 1;
             } else {
-                document.getElementById('chText').textContent = "타이틀 텍스트 변경";
+                title.textContent = "타이틀 텍스트 변경";
                 a = 0;
             }
         }
 
+        // function chShape() {
+        //     let box = document.getElementById('rect');
+        //     if (b == 0) {
+        //         box.style.backgroundColor = "red";
+        //         box.style.borderRadius = "50%";
+        //         b = 1;
+        //     } else {
+        //         box.style.backgroundColor = "yellow";
+        //         box.style.borderRadius = "0%";
+        //         b = 0;
+        //     }
         function chShape() {
-            if (b == 0) {
-                document.getElementById('rect').style.backgroundColor = "red";
-                document.getElementById('rect').style.borderRadius = "50%";
-                b = 1;
+            let box = document.getElementById('rect');
+            
+            if (box.style.backgroundColor == "yellow") {
+                box.style.backgroundColor = "red";
+                box.style.borderRadius = "50%";
+                
             } else {
-                document.getElementById('rect').style.backgroundColor = "yellow";
-                document.getElementById('rect').style.borderRadius = "0%";
-                b = 0;
+                box.style.backgroundColor = "yellow";
+                box.style.borderRadius = "0%";
+                
             }
         }
     </script>
