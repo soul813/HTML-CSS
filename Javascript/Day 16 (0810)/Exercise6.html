@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rect {width: 200px; height: 200px; background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div><img src="imgs/n1.jpg" alt="Banner" id="imgTransfer" onclick="imgT()"></div>
+    <h1 id="chText" onclick="chTxt()">타이틀 텍스트 변경</h1>
+    <div id="rect" onclick="chShape()"></div>
+
+    <script>
+        let num = 1;
+        let a = 0;
+        let b = 0;
+
+        function imgT(){
+            num++;
+            if (num > 8) {num=1;}
+            document.getElementById('imgTransfer').setAttribute("src", "imgs/n" + num + ".jpg");
+            console.log(num);
+        }
+
+        function chTxt() {
+            
+            if (a == 0){
+                document.getElementById('chText').textContent = "제목입니다.";
+                a = 1;
+            } else {
+                document.getElementById('chText').textContent = "타이틀 텍스트 변경";
+                a = 0;
+            }
+        }
+
+        function chShape() {
+            if (b == 0) {
+                document.getElementById('rect').style.backgroundColor = "red";
+                document.getElementById('rect').style.borderRadius = "50%";
+                b = 1;
+            } else {
+                document.getElementById('rect').style.backgroundColor = "yellow";
+                document.getElementById('rect').style.borderRadius = "0%";
+                b = 0;
+            }
+        }
+    </script>
+</body>
+</html>

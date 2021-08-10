@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>값 비교</title>
+</head>
+<body>
+    <script>
+        let a = prompt("첫번째 숫자를 입력하세요.");
+        let b = prompt("두번째 숫자를 입력하세요.");
+
+        sum(a,b);
+
+        function sum(a,b) {
+        if (a > b) {
+            alert (`${a} 이(가) 더 큽니다.`);
+        } else if (a < b) { 
+            alert (`${b} 이(가) 더 큽니다.`);
+        } else {
+            alert (`${a}, ${b} 같은 숫자를 입력하셨습니다.`);
+        }
+    }
+    </script>
+</body>
+</html>

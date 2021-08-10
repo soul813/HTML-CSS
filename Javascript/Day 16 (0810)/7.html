@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수간 충돌 방지 p.148</title>
+</head>
+<body>
+    <script>
+        (function() { 
+            let num = 100;
+            function menu() {
+                num += 100;
+                alert ("num1 : " + num);
+                let hi = "안녕?";
+            }
+            menu();
+        } ());
+
+        (function() {
+            let num = 100;
+            function menu() {
+                num += 10;
+                alert("num2 : " + num);
+            }
+            menu();
+        } ());
+    </script>
+</body>
+</html>

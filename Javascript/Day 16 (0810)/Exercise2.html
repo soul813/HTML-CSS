@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 배경칼라 바꾸기</title>
+</head>
+<body id="bg">
+    <button onclick="chColor()">배경컬러 바꾸기</button>
+    <!-- <div style="width:100px; height:100px;background-color: rgb(196,95,167);"></div> -->
+    <script>
+        function chColor() {
+            let r = Math.floor(Math.random()*255);
+            let g = Math.floor(Math.random()*255);
+            let b = Math.floor(Math.random()*255);
+            console.log(r,g,b);
+            document.getElementById('bg').style.backgroundColor = `rgb(${r},${g},${b})`
+        }
+    </script>
+</body>
+</html>
