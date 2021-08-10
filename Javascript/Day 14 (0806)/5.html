@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인사말 랜덤 출력</title>
+</head>
+<body>
+    <p id="test"></p>
+    <script>
+        let greeting = ["하이", "굿모닝", "좋은 아침", "아침 먹었어?", "하이 HI~", "Good morning", "잘잤어?"]
+
+        let rdm = Math.random();
+        let num = Math.floor (rdm * greeting.length);
+        console.log(rdm, num);
+
+        for (i in greeting) {
+            document.write(greeting[i]+"<br>");
+        }
+
+        document.getElementById('test').innerHTML = (`오늘 아침 인사는 "${greeting[num]}"이(가) 좋겠어.`);
+
+    </script>
+</body>
+</html>

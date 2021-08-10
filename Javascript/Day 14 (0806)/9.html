@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 객체</title>
+</head>
+<body>
+    <script>
+        let text = "Hello Javascript ";
+        let text2 = new String ("Hello Javascript"); //문자열 객체
+        let text3 = "jQuery";
+
+        console.log(text);
+        console.log(text2);
+
+        console.log(text.toUpperCase());
+        console.log(text.toLowerCase());
+        console.log(text[3].toUpperCase());
+
+        console.log(text.charAt(1));
+        console.log(text.indexOf("l"));
+        console.log(text.lastIndexOf("l"));
+
+        console.log(text.slice(6,10));
+        console.log(text.substring (6,10));
+        console.log(text.substr (6,10));
+        console.log(text.length);
+        console.log(text.trim());
+        console.log(text.concat(text3));
+        console.log(text.charCodeAt(0));
+        console.log(text.match("llo"));
+        console.log(text.replace("Hello", "Hi"));
+        console.log(text);
+        console.log(String.fromCharCode(169));
+        console.log('\u{1F60D}');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 실습_목록 추가</title>
+</head>
+<body>
+    <script>
+        let menu = ["짜장면","냉면","돈까스","해장국","샤브샤브"];
+        console.log (menu);
+
+        menu[0] = "라면";
+
+        document.write("<h2>오늘의 점심 메뉴 리스트입니다. 하나를 골라주세요.</h2>");
+        // document.write("<ul>");
+        // for (i in menu) {
+        //     document.write(`<li>${menu[i]}</li>`);
+        // }
+        // document.write("</ul>");
+        let ul = "<ul>";
+        for (i in menu) {
+            ul +=`<li>${menu[i]}</li>`;
+        }
+            ul += "</ul>";
+        document.write(ul);
+
+        // menu[0] = "라면";
+        console.log(menu);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 자주 쓰는 속성</title>
+</head>
+<body>
+    <script>
+        let green = ["교대", "방배", "강남"];
+        let yellow = ["미금", "정자", "수서"];
+
+        // green.splice (1,1);
+        // console.log(green);
+
+        green.splice (1,1,"서초", "역삼");
+        console.log(green);
+
+        let data1 = green.pop();
+        console.log(green);
+        console.log (data1);
+
+        let data2 = green.shift();
+        console.log(green);
+        console.log (data2);
+
+        green.push ("신도림");
+        console.log(green);
+
+        yellow.push(data1);
+        console.log (yellow);
+
+        yellow.unshift(data2);
+        console.log (yellow);
+
+    </script>
+</body>
+</html>

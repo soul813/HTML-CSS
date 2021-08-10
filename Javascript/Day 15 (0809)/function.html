@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function) 정리</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        myFuc();
+        myFuc();
+
+        function myFuc() { 
+            count++;
+            document.write (count + ".안녕하세요.","<br>");
+        }
+
+
+        myFuc();
+        myFuc();
+
+     
+        let theFuc = function(){ 
+            count++;
+            document.write (count + ".반갑습니다.","<br>");
+        }
+
+        theFuc();
+        theFuc();
+        theFuc();
+
+    </script>
+</body>
+</html>

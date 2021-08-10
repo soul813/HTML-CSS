@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 정리 문제</title>
+
+</head>
+<body id="bg">
+    <input type="text" id="colorInput" placeholder="추가하기 원하는 색상을 입력하세요.">
+    <button onclick="colorAdd()">컬러추가</button>
+    <button onclick="colorChange()">랜덤 컬러 변경</button>
+    <hr>
+    <ul id="colorList"></ul>
+
+    <script>
+        let color = [];
+
+        function colorAdd() {
+                        let colorData = document.getElementById('colorInput').value;
+                        color.push(colorData);
+                        
+
+                        let list ="";
+                        for(i in color) {
+                             list += `<li> ${color[i]} </li>`;
+                        }
+                        document.getElementById('colorList').innerHTML = list;
+                        console.log(color);
+                        }
+        function colorChange(){
+            let rdm = Math.random();
+            let num = Math.floor (rdm * color.length);
+            document.getElementById('bg').style.backgroundColor = color[num];
+            console.log(num, color[num]);
+        }
+    </script>
+</body>
+</html>

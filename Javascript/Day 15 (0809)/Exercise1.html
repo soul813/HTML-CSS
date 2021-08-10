@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 날짜를 출력하는 함수 작성</title>
+</head>
+<body>
+    <button onclick="clearInterval(addNum)">Click!!</button>
+    <script>
+        function todayDate (mon, day, week) {
+            document.write (`<br><br>오늘은 ${mon}월 ${day}일 ${week} 입니다.<br>`);
+        }
+        todayDate(8,10,"화요일");
+
+        function rect (width, height) {
+            document.write (`사각형 넓이 ${width}cm X ${height}cm = ${width*height}cm2 입니다.<br>`)
+        }
+        rect (18,21);
+
+        let num = 1;
+        let addNum = setInterval ( function() {
+            console.log (num);
+            num++;
+            if (num>7) {
+                num=1;
+            }
+        }  , 1000)
+    </script>
+</body>
+</html>

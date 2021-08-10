@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation object</title>
+</head>
+<body>
+    <script>
+        let info = navigator.userAgent.toLowerCase(); //운영체제 정보
+        console.log (info);
+        let osImg = null;
+
+        if (info.indexOf('windows') >=0 ) {
+            osImg = "windows";
+         } else if (info.indexOf('macintosh') >=0 ) {
+            osImg = "macintosh";
+          } else if (info.indexOf('iphone')>= 0 ) { 
+            osImg = "iphone";
+          } else if (info.indexOf('android')>=0 ) { 
+            osImg = "android";
+          }
+
+         document.write("<img src='"+osImg+".png'>","<br>");
+
+         let mw = screen.width;
+         let mh = screen.height;
+
+         document.write(`현재 접속한 해상도 너비는 ${mw}px, <br>`);
+         document.write(`현재 접속한 해상도 높이는 ${mh}px, <br>`);
+    </script>
+</body>
+</html>

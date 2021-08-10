@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 정의 방법</title>
+</head>
+<body>
+    <script>
+        let tv = new Object ();
+        tv.color = "Black";
+        tv.price = 30000;
+        tv.info = function(){
+            document.write("tv의 컬러는 " +tv.color+"입니다.<br>");
+            document.write(`tv의 가격은 ${tv.price}원입니다.<br><br>`);
+        }
+        tv.info();
+
+        let car = {
+            color : "Red",
+            price : 100000,
+            info : function (){
+            document.write("차의 컬러는 " +this.color+"입니다.<br>");
+            document.write(`차의 가격은 ${this.price}원입니다.<br>`);
+            }
+        }
+        car.info();
+    </script>
+</body>
+</html>
