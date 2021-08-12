@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 실습</title>
+</head>
+<body>
+    <h1 id="title">점심 리스트</h1>
+    <ul>
+        <li>가정식 정식</li>
+        <li>코다리 조림</li>
+        <li>제육볶음</li>
+        <li>해장국</li>
+        <li>칼국수</li>
+    </ul>
+    <div class="imgbox">
+        <img src="test1.jpg" alt="">
+    </div>
+    <button>타이틀</button>
+    <button>변경</button>
+    <button>코다리조림</button>
+    <script>
+        document.getElementsByTagName('button')[0].onclick = chText;
+        document.getElementsByTagName('button')[1].addEventListener("click", chBg);
+
+        function chText() {
+            document.querySelector('h1').innerHTML = "음식 리스트";
+        }
+
+        function chBg() {
+            for (let i=0 ; i<document.querySelectorAll('li').length ; i++){
+            document.querySelectorAll('li')[i].style.backgroundColor = "gold";
+            document.querySelectorAll('li')[i].style.border = "3px solid hotpink";
+            }
+        }
+
+        let imgTag = document.querySelector('img');
+        imgTag.addEventListener("mouseover", function() {
+            imgTag.setAttribute("src", "test2.jpg");
+        })
+        imgTag.addEventListener("mouseout", function(){
+            imgTag.setAttribute("src","test1.jpg");
+        })
+
+        document.getElementsByTagName('button')[2].addEventListener("click", function(){
+            // document.querySelectorAll('li')[1].style.fontSize = "30px";
+            document.querySelectorAll('li')[1].style.cssText = `font-size:32px ; color:red;`;
+        });
+    </script>
+</body>
+</html>
