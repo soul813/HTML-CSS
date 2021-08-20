@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0;}
+        .pic { background-color: #eee; transition: 1s; }
+        .pic img { vertical-align: top; transform: translateX(-300px); transition: 1s }
+        .pic img.on  { transform: translateX(0); }
+        .on { background-color: #f5dfe2;}
+
+    </style>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                // $('.pic>img').toggleClass('on');
+
+                // if ($('.pic>img').hasClass('on')) {
+                //     $('.pic>img').removeClass('on');
+                //     $(this).html('가위 이미지 보기');
+                //     $('.pic').css('background','#eee')
+                // } else {
+                //     $('.pic>img').addClass('on');
+                //     $(this).html('가위 이미지 닫기');
+                //     $('.pic').css('background','#fff')
+                // }
+            });
+
+            $('button').hover(function(){
+                    $('.pic>img').addClass('on');
+                    $(this).html('가위 이미지 닫기');
+            }, function(){
+                    $('.pic>img').removeClass('on');
+                    $(this).html('가위 이미지 보기');
+            });
+
+            $('textarea').keydown(function(){
+                $(this).addClass('on');
+            }).keyup(function(){
+                $(this).removeClass('on');
+                $('.display').text($(this).val());
+            // }).keypress(function(){
+            //     $('.display').text($(this).val());
+            });
+            //key press는 keydown과 유사하지만, alt, shift, ctrl, esc와 같은 특수키는 이벤트가 발생하지 않는다.
+
+        });
+    </script>
+
+</head>
+<body>
+    <div class="pic">
+        <img src="math_img_1.jpg" alt="가위">
+    </div>
+    <button>가위 이미지 보기</button>
+    <hr>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div class="display"></div>
+</body>
+</html>

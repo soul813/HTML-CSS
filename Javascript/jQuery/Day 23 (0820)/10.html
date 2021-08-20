@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 애니메이션</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        ul { margin: 0; padding: 0; list-style: none; }
+        ul>li { float: left; padding: 10px 20px; background-color: skyblue; 
+                text-align: center; position: relative;}
+        ul>li>ul { position: absolute; width: 100%; left: 0; top: 40px;
+                   display: none; }
+        ul>li>ul>li { width: 100%; padding: 5px 0; background-color: gold; }
+    </style>
+    <script>
+        $(function(){
+
+            $('ul>li').on('mouseover', function(){
+                // $('ul>li>ul').slideDown(500);
+                $(this).children('ul').stop().slideDown(500);
+            });
+            $('ul>li').on('mouseout', function(){
+                // $('ul>li>ul').slideUp(500);
+                $(this).children('ul').stop().slideUp(500);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="#">대메뉴1</a>
+            <ul>
+                <li>서브메뉴1-1</li>
+                <li>서브메뉴1-2</li>
+                <li>서브메뉴1-3</li>
+            </ul>
+        </li>
+        <li><a href="#">대메뉴2</a>
+            <ul>
+                <li>서브메뉴2-1</li>
+                <li>서브메뉴2-2</li>
+                <li>서브메뉴2-3</li>
+            </ul>
+        </li>
+        <li><a href="#">대메뉴3</a>
+            <ul>
+                <li>서브메뉴3-1</li>
+                <li>서브메뉴3-2</li>
+                <li>서브메뉴3-3</li>
+            </ul>
+        </li>
+        <li><a href="#">대메뉴4</a>
+            <ul>
+                <li>서브메뉴4-1</li>
+                <li>서브메뉴4-2</li>
+                <li>서브메뉴4-3</li>
+            </ul>
+        </li>
+        
+    </ul>
+</body>
+</html>

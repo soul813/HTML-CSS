@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성조작  메서드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+            $("[href]").click(function(){
+                // $('a > img').attr('src','math_img_2.jpg');
+                // $('a > img').attr('alt','바위');
+                $('a > img').attr({'src':'math_img_2.jpg', 'alt':'바위'}).css('border','2px solid red');
+                $(this).attr({'href':'https://www.naver.com', 'target':'_blank'});
+            });
+            console.log($('a > img').attr('src'));
+        });
+    </script>
+</head>
+<body>
+    <!-- 가위를 클릭하면 바위로 바뀌고, 네이버로 새창 이동, alt 속성 바위로 변경, 테두리 2px solid red -->
+    <a href="#"><img src="math_img_1.jpg" alt="가위"></a>
+</body>
+</html>

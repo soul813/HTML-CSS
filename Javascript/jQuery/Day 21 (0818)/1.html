@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 1일차</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <h1 id="title2"></h1>
+    <h1 id="title3"></h1>
+    <ul>
+        <li>바나나</li>
+        <li>멜론</li>
+        <li>사과</li>
+    </ul>
+    <script>
+        // alert("hi");
+        console.log("test");
+        document.getElementById('title').innerHTML = "<q>안녕하세요?</q>"
+        $('#title2').html("<q>반가워요.</q>");
+        $('#title3').text("<q>반가워요.</q>");
+
+        // //클릭한 위치만 배경컬러 변경
+        // // Javascript의 경우-------------------------
+        // let liTag = document.querySelectorAll('ul>li');
+
+        // for (let i=0 ; i < liTag.length ; i++){
+        //     liTag[i].onclick = function(){
+        //         for (let i=0 ; i < liTag.length ; i++){
+        //             liTag[i].style.backgroundColor = "#fff";
+        //         }
+        //         liTag[i].style.backgroundColor = "red";
+        //     }
+        // }
+        // // -------------------------------------------
+
+        //jQuery의 경우--------------------------------
+        // $('ul>li:nth-child(1)').css("background","red"); 하나의 배열만 선택 할 경우
+        $('ul>li').click(function(){
+            $('ul>li').css("background","#fff");
+            $(this).css("background","red");
+        });
+        // ---------------------------------------------
+
+    </script>
+</body>
+</html>

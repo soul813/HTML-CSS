@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #wrap {padding: 30px 100px; text-align: center; width: 200px;
+               margin: 50px auto; height: 250px; border: 5px solid teal;}
+        #title { font-size: 42px; }
+        .fa { font-size: 62px; color: tomato;}
+        #like { font-size: 32px; color: violet;}
+
+        .view {display: none;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="title">추천</h1>
+        <i class="fa fa-thumbs-up"></i>
+        <p id="like">♥ ♥ ♥</p>
+    </div>
+
+    <script>
+        let wrap = document.querySelector('#wrap');
+        let title = document.querySelector('#title')
+        let icon = document.querySelector('.fa');
+        let like = document.querySelector('#like');
+
+        // wrap.onclick = function() {
+        //         title.innerHTML = "비추천";
+        //         icon.classList.remove('fa-thumbs-up');
+        //         icon.classList.add('fa-thumbs-down');
+        //         like.classList.toggle('view');
+        //     } 
+
+        wrap.onclick = function() {
+            this.classList.add('on')
+
+            if (title.innerHTML == "추천") {
+                title.innerHTML = "비추천";
+                icon.classList.remove('fa-thumbs-up');
+                icon.classList.add('fa-thumbs-down');
+                like.classList.toggle('view');
+            } else {
+                title.innerHTML = "추천";
+                icon.classList.add('fa-thumbs-down');
+                icon.classList.remove('fa-thumbs-up');
+                like.classList.toggle('view');
+            }
+
+        }
+    </script>
+</body>
+</html>

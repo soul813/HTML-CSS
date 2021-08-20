@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>탐색 선택자</title>
+    <style>
+        * { margin: 5px;  }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#m1').children('span').css('border','2px solid red'); // tag or class 등을 인자로 입력 가능
+            $('#m2').children().css('border','2px solid crimson'); //자식 선택
+            $('#m2').children().children('a').css('border','2px solid orange'); //자손 선택
+            // $('#m3 span').css('border','2px solid skyblue');
+            $('#m3 span').closest('div').css('border','2px solid skyblue'); // .closest(div) : span에서 가장 근접한 div 선택
+            $('#m4 > span.m').next().css('border','2px solid green');//span.m 다음 요소 선택
+            $('#m4 > span.m').nextAll().css('border','2px solid gold'); //span.m 다음부터 모두 선택
+            $('#m4 > span.m').nextUntil('em').css('border','2px solid orange'); // span.m 부터 em 전까지 선택
+            $('#m5 > span.test').prev().css('border','2px solid gold'); //span.test 이전 요소 선택
+            $('#m5 > span').filter('.m').css('border','2px solid red'); // .m class를 가진 요소만 선택
+            $('#m6 > div').has('span').css('border','2px solid navy');// div 중 span tag를 가진 요소만 선택
+            $('#e1 > div').add('#e1 > p').css('border','2px solid red'); // div tag 선택하고, p tag도 추가하여 선택
+            $('#e2').children('p').addBack().css('border','2px solid orange'); // p tag 선택하고, 이전 단계 요소도 추가하여 선택 
+            $('#e3').find('span').css('border','2px solid gold').end().find('em').css('border','2px solid green');
+            //.end()는 종료를 뜻함. 즉, span을 찾아서 보더 그리고, 끝내고, 'em'을 찾아서 보더 그려라는 뜻.
+            if ( $('#e4').children().is('p') ) {
+                console.log('#e4는 자식 p가 있습니다.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- 부모>자식 -->
+    <div id="m1">
+        <a href="#">내용1_1</a><span>내용1_2</span>
+    </div>
+    <!-- 부모>자식>자손 -->
+    <div id="m2">
+        <div>
+            <a href="#">내용2_1</a><span>내용2_2</span>
+        </div>
+    </div>
+    <div id="m3">
+        <div><span>내용3_1</span></div>
+    </div>
+    <div id="m4">
+        <span class="m">내용4_1</span>
+        <span>내용4_2</span>
+        <span>내용4_3</span>
+        <em>내용4_4</em>
+    </div>
+    <div id="m5">
+        <span class="m">내용5_1</span>
+        <span class="test">내용5_2</span>
+        <span>내용5_3</span>
+    </div>
+    <div id="m6">
+        <div><span>내용6_1</span></div>
+        <div>내용6_2</div>
+    </div>
+    <hr>
+    <div id="e1">
+        <div>내용1_1</div>
+        <p>내용1_2</p>
+    </div>
+    <div id="e2">
+        <p>내용2</p>
+    </div>
+    <div id="e3">
+        <span>내용3_1</span ><em>내용3_2</em>
+    </div>
+    <div id="e4">
+        <p>내용4<p>
+    </div>
+</body>
+</html> 

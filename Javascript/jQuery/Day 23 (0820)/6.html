@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이용 애니메이션</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        #box { width: 50px; height: 50px; background-color: crimson;
+               position: absolute; top: 50%; left: 50%;}
+    </style>
+    <script>
+        $(document).on('keydown', function(e){
+            console.log(e);
+            switch (e.keyCode) {
+                case 37 : $('#box').animate({left: '+=-50px'}, 200); // 왼쪽 화살표
+                break;
+                case 39 : $('#box').animate({left: '+=50px'}, 200); // 오른쪽 화살표
+                break;
+                case 38 : $('#box').animate({top: '+=-50px'}, 200); // 위쪽 화살표
+                break;
+                case 40 : $('#box').animate({top: '+=50px'}, 200); // 아래쪽 화살표
+                break;
+                default : alert('올바른 방향키를 누르세요.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

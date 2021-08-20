@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 조작</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .on { border-radius: 50%; background-color: crimson; transition: .5s;}
+        .box { border: 5px solid blue; padding: 50px; margin: 20px; transition: .5s;}
+    </style>
+    <script>
+        $(function(){
+
+            $('.btn').click(function(){
+                $('div').addClass('box on');
+            });
+            $('div').click(function(){
+                // $(this).removeClass('on');
+
+                // if($(this).hasClass('on')){
+                //     $(this).removeClass('on');
+                // } else {
+                //     $(this).addClass('on');
+                // }
+
+                $(this).toggleClass('on');
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div></div>
+    <button class="btn">Click~!</button>
+</body>
+</html>
