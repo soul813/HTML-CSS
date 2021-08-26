@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 실습_목록 추가2</title>
+</head>
+<body>
+    <script>
+        let car = ["밴츠","BMW","VOLVO","테슬라","아이코닉","SM6"];
+
+        document.write(car, car.length, "<br>");
+        document.write(car[2], "<br>");
+
+        let carlist = "<ul>";
+        for (let i=0 ; i<car.length ; i++) {
+            carlist += "<li>" + car[i] + "</li>";
+        }
+        carlist += "</ul>";
+
+        document.write(carlist);
+
+    </script>
+</body>
+</html>

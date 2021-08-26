@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 if</title>
+</head>
+<body>
+    <!-- <script>
+        let dbId = "test";
+        let dbPw = 1234;
+
+        let userId = prompt("아이디를 입력하세요.","");
+
+
+        if (dbId==userId) {
+            let userPw = prompt("비밀번호를 입력하세요.","");
+            if (dbPw==userPw) {
+
+                document.write("로그인 성공 " + dbId + "님 환영합니다.");
+            } else {
+                document.write(dbId + "님 비밀번호가 일치하지 않습니다..");
+            }
+        } else {
+            document.write("ID가 일치하지 않습니다.");
+        }
+    </script> -->
+    <script>
+        let dbId = "test";
+        let dbPw = 1234;
+
+        let userId = prompt("아이디를 입력하세요.","");
+        let userPw = prompt("비밀번호를 입력하세요.","");
+
+        if (userId=="test" && userPw==1234) {
+            alert("환영합니다.");
+        } else {
+            alert("아이디, 비번이 틀렸습니다.");
+        }
+    </script>
+</body>
+</html>

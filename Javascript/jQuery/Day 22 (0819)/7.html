@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover 와 Mouseenter의 차이점 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .bg { padding: 40px; margin-bottom: 40px; background-color: #ccc;}
+        .inner { padding: 20px; background-color: #999; }
+    </style>
+    <script>
+        $(function(){
+            $('#wrap1').mouseover(function(){ //부모, 자식 영역 이동도 이벤트 발생
+                // console.log('@@ mouseover');
+                $('.display').append('<stong>@@ mouseover</strong>')
+            });
+            $('#wrap2').mouseenter(function(){ //부모, 자식 영역 이동해도 이벤트 발생 하지 않음
+                // console.log('** mouseenter');
+                $('.display').append('<stong>** mouseenter</strong>')
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap1" class="bg">
+        <div class="inner">mouseover</div>
+    </div>
+    <div id="wrap2" class="bg">
+        <div class="inner">mouseenter</div>
+    </div>
+    <div class="display"></div>
+</body>
+</html>

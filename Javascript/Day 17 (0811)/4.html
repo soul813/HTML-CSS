@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgbox {width: 400px; padding: 20px; border: 1px solid #ccc;
+                 margin-bottom: 20px;}
+        .imgbox img {width: 100%;}
+
+        .caption { width: 400px; padding: 20px; border: 1px solid #ccc; 
+                   display: none;}
+    </style>
+</head>
+<body>
+    <div class="imgbox">
+        <img src="test1.jpg" alt="">
+        <button>상세보기</button>
+    </div>
+    <div class="caption">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusantium at voluptates reiciendis voluptatum reprehenderit sunt! Dolor aperiam facilis explicabo exercitationem hic placeat alias temporibus, cupiditate, ad, voluptatem deleniti natus.</p>
+        <button>상세닫기</button>
+    </div>
+
+    <script>
+        let imgbox = document.querySelector('.imgbox>button');
+        imgbox.addEventListener("click", function(){
+            document.querySelector('.caption').style.display = "block";
+            // imgbox.style.display = "none";
+            this.style.display = "none";
+        })
+
+        let caption = document.querySelector('.caption>button');
+
+        caption.addEventListener ("click", function(){
+            document.querySelector('.caption').style.display = "none";
+            imgbox.style.display = "block";
+        })
+    </script>
+
+</body>
+</html>

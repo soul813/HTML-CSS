@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이트 박스 갤러리</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #imgbox { width: 800px; margin: 50px auto;}
+        .imglist {list-style: none;}
+        .imglist li { float: left; width: 32%; margin: 0.5%; overflow: hidden; height: 250px; box-sizing: border-box;}
+        .imglist li img {width: 100%; filter: grayscale(); transition: .5s;}
+
+        .imglist li:hover {border: 1px solid skyblue;}
+        .imglist li:hover img{transform: scale(1.1); filter: grayscale(0);}
+
+        #lightBox {position: fixed; left: 0; right: 0; top: 0; bottom: 0;
+                   background-color: rgba(0,0,0,0.5); display: none;}
+        #lightBox img { display: block; margin: 100px auto; border: 5px solid #fff;
+                        max-height: 600px;}
+    </style>
+</head>
+<body>
+    <div id="imgbox">
+        <ul class="imglist">
+            <li><img src="images/iu-1-thumb.jpg" data-src="images/iu-1.jpg" alt="0"></li>
+            <li><img src="images/iu-2-thumb.jpg" data-src="images/iu-2.jpg" alt="1"></li>
+            <li><img src="images/iu-3-thumb.jpg" data-src="images/iu-3.jpg" alt="2"></li>
+            <li><img src="images/iu-4-thumb.jpg" data-src="images/iu-4.jpg" alt="3"></li>
+            <li><img src="images/iu-5-thumb.jpg" data-src="images/iu-5.jpg" alt="4"></li>
+            <li><img src="images/iu-6-thumb.jpg" data-src="images/iu-6.jpg" alt="5"></li>
+        </ul>
+        <div id="lightBox">
+            <img src="images/iu-1.jpg" alt="lightBoxImg">
+        </div>
+    </div>
+
+    <script>
+        let thumbImg = document.querySelectorAll('.imglist>li>img');
+        let lightBoxImg = document.querySelector('#lightBox>img');
+        let lightbox = document.getElementById('lightBox');
+
+        for (let i = 0 ; i < thumbImg.length ; i++){
+            thumbImg[i].addEventListener("click", function(){
+                let dataSrc = this.getAttribute('data-src');
+                console.log (this, dataSrc);
+                lightBoxImg.setAttribute("src", dataSrc);
+                lightbox.style.display = "block";
+            });
+        }
+
+        lightBoxImg.onclick = function(){
+            lightbox.style.display = "none";
+        };
+
+
+    </script>
+</body>
+</html>

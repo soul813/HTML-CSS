@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky & Gauging bar</title>
+    <style>
+        html {scroll-behavior: smooth;}
+        body { margin: 0;}
+        header { text-align: center; padding: 30px; }
+        nav { background-color: #333; transition: 1s; margin: 0; overflow: hidden;}
+        nav ul { padding: 0; list-style: none; }
+        nav ul li { display: inline-block; padding: 10px 30px; }
+        nav ul li a { color: #fff; text-decoration: none;}
+        nav ul li a:hover { color: greenyellow; }
+
+        #content { padding: 30px;}
+        .sticky { position: fixed; top: 0; width: 100%; background-color: crimson; }
+        .sticky + #content { padding-top: 100px;}
+
+        .btntop { display: block; width: 50px; height: 0px; text-align: center;
+                  line-height: 50px; color: #fff; background-color: crimson; text-decoration: none;
+                  position: fixed; right: 20px; bottom: 50px; z-index: 10; opacity: 0; transition: 1.5s;
+                  overflow: hidden;}
+
+        .on { opacity: 1; height: 50px;}
+
+        #box { width: 100%; height: 8px; background-color: #ccc;}
+        #box .bar { height: 100%;  background-color: gold; width: 0%;}
+    </style>
+</head>
+<body>
+    <header id="top">
+        <h1>메뉴단 고정</h1>
+        <p>Sticky 효과 상단 고정하기</p>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">NOTICE</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div id="box">
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <div id="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, itaque possimus! Cum dicta doloremque suscipit fugiat totam commodi, voluptatum delectus ducimus distinctio, sunt et labore, tenetur eveniet nemo hic facere.</p>
+    </div>
+    <a href="#top" class="btntop">TOP</a>
+
+    <script>
+        let nav = document.querySelector('nav');
+        let navtop = nav.offsetTop;
+        console.log(navtop);
+
+        //상단 메뉴 출력용
+        
+        window.onscroll = function(){
+            
+            let scroll = window.pageYOffset;
+            console.log(scroll);
+
+            if (scroll >= navtop) {
+                nav.classList.add ('sticky');
+            } else {
+                nav.classList.remove ('sticky');
+            }
+        //탑버튼 출력용
+        let topbtn = document.querySelector('.btntop');
+            if ( scroll > 200 ) {
+                topbtn.classList.add ('on');
+            } else {
+                topbtn.classList.remove ('on');
+            }
+        
+            let winscroll = document.documentElement.scrollTop; //Scroll의 y좌표, 'window.pageYOffset'와 같음.
+
+            let scrollHeight = document.documentElement.scrollHeight; // 스크롤 전체 세로길이 scrollHeight
+            let clientHeight = document.documentElement.clientHeight;// 보이는 화면의 세로길이 clientHeight
+
+            //화면에 안보이는 남은 스크롤 길이 : scrollHeigh - clientHeight;
+            let height = scrollHeight - clientHeight;
+            // 스크롤 된 양 : (스크롤 Y좌료 / 남은 화면의 길이) *100
+            let scrolled = (winscroll / height)*100;
+            console.log(scrolled);
+
+            let bar = document.querySelector('.bar');
+            bar.style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .left {float: left; margin: 20px; color: red;}
+    </style>
+    <script>
+        $(function(){
+            $('a').click(function(e){
+                e.preventDefault();
+                $('a').attr('href','#');
+            });
+            $('ul>li').click(function(e){
+                $('ul>li').attr('class','left');
+                $('a').removeAttr('target');
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="" target="_blank">menu1</a></li>
+        <li><a href="" target="_blank">menu2</a></li>
+        <li><a href="" target="_blank">menu3</a></li>
+    </ul>
+</body>
+</html>

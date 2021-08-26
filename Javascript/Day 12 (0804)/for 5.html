@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점찍기</title>
+</head>
+<body>
+    <h1>몇개의 별을 찍을까요?</h1>
+    <input type="text" id="row" placeholder="가로 별 수"><br>
+    <input type="text" id="column" placeholder="세로 별 수"><br>
+    <button onclick="star()">별찍기</button>
+    <script>
+        function star() {
+        let row = document.getElementById('row').value;
+        let column = document.getElementById('column').value;
+        for (let i=1;i<=row;i++) {
+            for (let j=1;j<=column;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+    </script>
+</body>
+</html>

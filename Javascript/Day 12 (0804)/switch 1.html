@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case exercise</title>
+</head>
+<body>
+    <script>
+        let site = prompt("본인이 선호하는 검색사이트를 입력하세요.");
+        let url;
+
+        switch (site) {
+            case "naver" : 
+                url = "www.naver.com";
+                document.write(`${site}를 선호하시네요. 접속 주소는 ${url} 입니다.`);
+                break;
+            case "daum" :
+            url = "www.daum.net";
+            document.write(`${site}를 선호하시네요. 접속 주소는 ${url} 입니다.`);
+            break;
+            case "google" :
+            url = "www.google.com";
+            document.write(`${site}를 선호하시네요. 접속 주소는 ${url} 입니다.`);
+            break;
+            default: alert(`보기중에 없는 사이트 입니다.`);
+        }
+
+        if (url) {
+            window.open("https://"+url);
+            // window.location.href = "https://"+url;
+        }
+    </script>
+</body>
+</html>

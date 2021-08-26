@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email 유효성 검사</title>
+</head>
+<body>
+    <script>
+        let userEmail = prompt ("이메일 주소를 입력하세요.");
+        let arrUrl = [".com", "co.kr", ".net", "or.kr", "go.kr"];
+
+        let check1 = false;
+        let check2 = false;
+
+        if (userEmail.indexOf("@")>0) {
+            check1 = true;
+        }
+
+        for (i in arrUrl) {
+            if (userEmail.indexOf(arrUrl[i])>0) {
+                check2 = true;
+            }
+        }
+
+        if (check1 == true && check2 == true) {
+            document.write (userEmail);
+        } else {
+            alert ("이메일 형식이 잘못되었습니다.")
+        }
+    </script>
+</body>
+</html>

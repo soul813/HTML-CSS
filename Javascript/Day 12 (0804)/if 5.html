@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문자의 이름 입력</title>
+</head>
+<body>
+    <script>
+        let userName = prompt("방문자의 이름을 입력하세요.","");
+
+        if (userName) {
+            document.write(`${userName}님 환영합니다.`);
+        } else {
+            let userName2 = prompt("이름을 꼭 입력 해주세요.","");
+            document.write(`${userName2}님 환영합니다.`);
+        }
+    </script>
+</body>
+</html>

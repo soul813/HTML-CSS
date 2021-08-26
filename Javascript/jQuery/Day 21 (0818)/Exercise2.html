@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .on {background-color: crimson; color: #ccc; font-weight: bold;}
+    </style>
+    <script>
+        $(function(){
+            // $('.list > li').click(function(){
+            //     $(this).toggleClass('on');
+            // });
+            // $('.list > li:eq(2)').css('border','4px solid crimson');
+            // $('.list > li:last-child').css('border','4px solid gold');
+            // $('.m').nextAll().css('border','4px solid skyblue');
+            $('.m').siblings().css('border','4px solid gold');
+        });
+    </script>
+</head>
+<body>
+    <ul class="list">
+        <li>1번</li>
+        <li>2번</li>
+        <li class="m">3번</li>
+        <li>4번</li>
+        <li>5번</li>
+        <li>6번</li>
+    </ul>
+    <ul id="menu">
+        <li>정식</li>
+        <li>햄버거</li>
+        <li>국수</li>
+        <li>해장국</li>
+        <li>돈까스</li>
+    </ul>
+</body>
+</html>

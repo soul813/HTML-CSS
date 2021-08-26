@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위, 바위, 보</title>
+</head>
+<body>
+    <script>
+        let num = Math.floor ( Math.random()*3) + 1;
+        console.log(num); 
+
+
+        document.write(`<img src="math_img_${num}.jpg">`);
+
+        let game = prompt ("가위, 바위, 보 중에서 무엇이 나올지 맞추어 보세요.","가위");
+        let gameNum;
+        switch (game) {
+            case "가위" : gameNum = 1; break;
+            case "바위" : gameNum = 2; break;
+            case "보" : gameNum = 3; break;
+            default : alert("잘못 입력 하셨습니다.");
+        }
+        if (num == gameNum) {
+            document.write(`<img src="game_1.jpg">`);
+        } else {
+            document.write(`<img src="game_2.jpg">`);
+        }
+
+    </script>
+</body>
+</html>

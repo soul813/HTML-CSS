@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 선택자</title>
+</head>
+<body>
+    <h1 id="title">DOM 선택자</h1>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quae exercitationem soluta voluptatem unde commodi, beatae sit a incidunt? Quae, eveniet facere eum labore debitis vel nemo veniam unde saepe.</p>
+    <ul>
+        <li>바나나</li>
+        <li>딸기</li>
+        <li>수박</li>
+        <li>키위</li>
+        <li>체리</li>
+        <li>망고</li>
+        <li>거봉</li>
+    </ul>
+    <p>문단입니다.</p>
+    <hr>
+    <button onclick="test1()">배경컬러</button> <!-- class="text"의 배경컬러를 yellow로 변경 -->
+    <button onclick="test2()">변경</button> <!-- "바나나"를 "파인애플"로 변경 -->
+    <button onclick="test3()">갯수출력</button> <!-- li box 개수를 확인해서 출력 => "문단입니다." 자리에 바꿔서 출력 -->
+    <button onclick="test4()">삭제</button> <!-- class="text" 안보이게 -->
+    <button onclick="test5()">출력</button> <!-- class="text" 보이게 -->
+
+    <script>
+        let title = document.getElementById('title');
+        // let title = document.querySelector('#title');
+        title.style.backgroundColor = "red";
+        title.style.color = "#fff";
+        title.style.textAlign = "center";
+
+        let text = document.getElementsByClassName('text');
+        let list = document.getElementsByTagName('li');
+        let p = document.getElementsByTagName('p');
+
+        function test1() {
+            text[0].style.backgroundColor = "gold";
+        }
+
+        function test2() {
+            // list[0].textContent = "파인애플";
+            list[0].innerHTML = "파인애플";
+        }
+
+        function test3() { 
+            p[1].innerHTML = `리스트의 갯수는 ${list.length}개 입니다.`;
+        }
+
+        function test4() { 
+            text[0].style.display = "none";
+        }
+
+        function test5() {
+            document.querySelector(".text").style.display = "block";
+         }
+
+         for (let i=0 ; i<=6 ; i++) {
+             if (i%2==0) {
+             document.querySelectorAll('li')[i].style.backgroundColor = "skyblue";
+             } else {
+                 list[i].style.backgroundColor = "gold";
+             }
+         }
+
+    </script>
+</body>
+</html>

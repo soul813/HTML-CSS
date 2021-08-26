@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배너연습</title>
+    <style>
+        #gallery { width: 350px; margin: 50px auto; text-align: center; }
+        #gallery img{ width: 100%; }
+        #gallery button { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div id="gallery">
+        <div><img src="imgs/n1.jpg" alt="banner1" id="photo"></div>
+        <div>
+            <button onclick="prev()">이전</button>
+            <button onclick="next()">다음</button>
+        </div>
+    </div>
+    <script>
+        let num = 1;
+ 
+        function next() {
+            num++;
+            if (num >= 7) {
+                num=1;
+            }
+            console.log (num+".jpg 이미지 다음 넘기기");
+            document.getElementById('photo').setAttribute("src", "imgs/n"+num+".jpg");
+        }
+        function prev() {
+            num--;
+            if (num <= 0) {
+                num=6;
+            }
+            console.log (num+".jpg 이미지 뒤로 넘기기");
+            document.getElementById('photo').setAttribute("src", "imgs/n"+num+".jpg");
+        }
+    </script>
+</body>
+</html>

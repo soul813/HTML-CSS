@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심메뉴 추출기</title>
+</head>
+<body>
+    <script>
+        let rdm = Math.random();
+        let num = Math.ceil(rdm*5);
+        console.log(num);
+        let menu;
+
+        switch (num){
+            case 1 : menu = "짜장면"; break;
+            case 2 : menu = "집밥"; break;
+            case 3 : menu = "냉면"; break;
+            case 4 : menu = "갈비탕"; break;
+            case 5 : menu = "비빔밥"; break;
+            default : alert("준비되지 않은 메뉴입니다.");
+        }
+        document.write(`오늘은 ${menu}을 드시는게 좋겠어요.`);
+    </script>
+</body>
+</html>

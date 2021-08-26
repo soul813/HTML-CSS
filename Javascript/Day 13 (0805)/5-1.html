@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위, 바위, 보 게임</title>
+</head>
+<body>
+    <h1>가위, 바위, 보 게임</h1>
+    <h2 id="result"></h2>
+    <script>
+        let num = Math.floor ( Math.random()*3) + 1;
+        console.log(num); 
+
+
+        let game = prompt ("가위, 바위, 보 중에서 하나를 내세요.","가위");
+        let gameNum;
+        switch (game) {
+            case "가위" : gameNum = 1; break;
+            case "바위" : gameNum = 2; break;
+            case "보" : gameNum = 3; break;
+            default : alert("잘못 입력 하셨습니다.");
+        }
+
+        document.write(`<img src="math_img_${num}.jpg">`); //컴퓨터
+        document.write(`  [ vs ]  `);
+        document.write(`<img src="math_img_${gameNum}.jpg">`); //사용자
+
+        if ( num == gameNum ) {
+            document.getElementById('result').innerHTML = "비겼습니다.";
+        } else if (num-gameNum==-1 || num-gameNum==2) {
+            document.getElementById('result').innerHTML = "이겼습니다.";
+        } else {
+            document.getElementById('result').innerHTML = "졌습니다.";
+        }
+
+    </script>
+</body>
+</html>

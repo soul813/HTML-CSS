@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열편집 p.101</title>
+</head>
+<body>
+    <script>
+        let arr_1 = ["사당", "교대", "방배", "강남"];
+        let arr_2 = ["신사", "압구정", "옥수"];
+
+        let result = arr_1.join(" - "); // 배열 연결하기
+        console.log (arr_1);
+        console.log (result);
+
+        result = arr_1.concat (arr_2); // 배열 합치기
+        console.log (result);
+
+        result = arr_1.slice (1,3);   //배열에서 지정한 범위로 자르기, 끝번호는 포함하지 않는다.
+        console.log (result);
+
+        arr_1.sort();   // 오름차순으로 정렬
+        console.log (arr_1);
+
+        arr_2.reverse();   //배열을 역순으로 변경
+        console.log (arr_2);
+
+        arr_1.splice (2,1,"테스트");   // 배열을 지정한 범위에 대해서 (인덱스 번호, 자를 갯수) 삭제
+                                     // 배열을 지정한 범위에 대해서 (인덱스 번호, 변경할 갯수, "테스트") 교체
+        console.log (arr_1);
+
+        arr_1.pop ();   // 마지막 배열을 삭제
+        console.log (arr_1);
+
+        result = arr_1.shift(); //첫번째 인덱스 번호 삭제
+        console.log (arr_1);
+
+        arr_1.push(result); // 배열에 맨 마지막에 추가가 됨.
+        console.log (arr_1);
+        arr_1.push("확인");
+        console.log (arr_1);
+
+        arr_1.unshift ("추가"); // 배열에 맨 앞에 추가가 됨.
+        console.log (arr_1);
+    </script>
+</body>
+</html>

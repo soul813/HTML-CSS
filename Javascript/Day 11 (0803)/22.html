@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>용돈 계산기 -> 58p</title>
+</head>
+<body>
+    <h1>이번달 용돈 사용 내역을 입력하세요.</h1>
+
+    용돈 총액 : <input type="text" id="all">원
+    <hr>
+    교통비 : <input type="text" id="transp" placeholder="교통비 입력"><br>
+    식비 : <input type="text" id="meal" placeholder="식비 입력"><br>
+    기타 : <input type="text" id="etc" placeholder="기타 입력"><br>
+    <button onclick="cal()">결과 확인</button>
+    <hr>
+    <p id="result"></p>
+
+    <script>
+
+        function cal(){
+            let all = document.getElementById('all').value;
+            let transp = document.getElementById('transp').value;
+            let meal = document.getElementById('meal').value;
+            let etc = document.getElementById('etc').value;
+
+            let total = Number(transp) + Number(meal) + Number(etc);
+            let result = all - total;
+            console.log(all, typeof all);
+            console.log(transp, typeof transp);
+            console.log(meal, typeof meal);
+            console.log(etc, typeof etc);
+            console.log(result, typeof result);
+
+            let result2 = result >= 0 ? "세이브 되었으니 용돈 관리를 잘 하셨습니다." : " 초과 되었으니 용돈 관리를 잘 못하셨습니다."
+
+            document.getElementById('result').innerHTML = `${result}원 ${result2}`;
+        }
+
+    </script>
+</body>
+</html>

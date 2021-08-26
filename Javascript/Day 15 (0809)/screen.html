@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let w = screen.width;
+        let h = screen.height;
+
+        let w2 = screen.availWidth;
+        let h2 = screen.availHeight;
+
+        let color = screen.colorDepth;
+
+        console.log (`모니터 전체 너비 : ${w} / 모니터 전체 세로 : ${h}`);
+        console.log (`작업 표시줄 제외 너비 : ${w2} / 작업 표시줄 제외 세로 : ${h2}`);
+        console.log (`모니터가 표현가능한 bit수 : ${color}`);
+
+        let ow = window.outerWidth;
+        let oh = window.outerHeight;
+        let iw = window.innerWidth;
+        let ih = window.innerHeight;
+
+        console.log (`브라우저 외곽 너비 : ${ow} / 세로 : ${oh}`)
+        console.log (`브라우저 내부 너비 : ${iw} / 세로 : ${ih}`)
+
+    </script>
+</body>
+</html>

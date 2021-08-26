@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap { width: 800px; margin: 0 auto; padding: 50px;}
+        #wrap p { color: #555; line-height: 2;}
+
+        #popup_bg { position: fixed; left: 0; right: 0; top: 0; bottom: 0;
+                    background-color: rgba(0,0,0,0.5); z-index: 999;}
+        #popup_bg .modal { width: 300px; padding: 20px; background-color: #fff; text-align: center;
+                           margin: 50px auto; }
+        #popup_bg .modal img { margin-bottom: 20px; }
+        /* #popup_bg .modal button {  } */
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="title" onclick="popOpen()">Layer Popup 만들기</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit cumque eius, distinctio nesciunt ipsam amet placeat. Aspernatur atque tempore nihil laboriosam dolorem architecto consequuntur ex ullam provident praesentium!</p>
+    </div>
+    <div id="popup_bg">
+        <div class="modal">
+            <img src="window_object_1.jpg" alt="">
+            <button onclick="popClose()">닫기</button>
+        </div>
+    </div>
+    <script>
+        function popClose() {
+            document.getElementById('popup_bg').style.display = "none";
+        }
+        function popOpen() {
+            document.getElementById('popup_bg').style.display = "block"
+        }
+    </script>
+</body>
+</html>

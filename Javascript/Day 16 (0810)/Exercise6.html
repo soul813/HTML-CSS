@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rect {width: 200px; height: 200px; background-color: yellow; transition: .5s;}
+   
+    </style>
+</head>
+<body>
+    <div><img src="imgs/n1.jpg" alt="Banner" id="imgTransfer" onclick="imgT()"></div>
+    <h1 id="chText" onclick="chTxt()">타이틀 텍스트 변경</h1>
+    <div id="rect" onclick="chShape()"></div>
+
+    <script>
+        document.getElementById('rect').style.backgroundColor = "yellow"
+        let num = 1;
+        let a = 0;
+        let b = 0;
+
+        function imgT(){
+            num++;
+            if (num > 8) {num=1;}
+            document.getElementById('imgTransfer').setAttribute("src", "imgs/n" + num + ".jpg");
+            console.log(num);
+        }
+
+        function chTxt() {
+            let title = document.getElementById('chText');
+            if (a == 0){
+                title.innerHTML = "제목입니다.";
+                a = 1;
+            } else {
+                title.textContent = "타이틀 텍스트 변경";
+                a = 0;
+            }
+        }
+
+        // function chShape() {
+        //     let box = document.getElementById('rect');
+        //     if (b == 0) {
+        //         box.style.backgroundColor = "red";
+        //         box.style.borderRadius = "50%";
+        //         b = 1;
+        //     } else {
+        //         box.style.backgroundColor = "yellow";
+        //         box.style.borderRadius = "0%";
+        //         b = 0;
+        //     }
+        function chShape() {
+            let box = document.getElementById('rect');
+            
+            if (box.style.backgroundColor == "yellow") {
+                box.style.backgroundColor = "red";
+                box.style.borderRadius = "50%";
+                
+            } else {
+                box.style.backgroundColor = "yellow";
+                box.style.borderRadius = "0%";
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node로 list 만들기</title>
+</head>
+<body>
+    <h1>점심 리스트 등록</h1>
+    <input type="text" id="menu" required placeholder="점심 메뉴를 등록해 주세요."> 
+    <button onclick="add()">등록</button>
+    <ul class="menulist"></ul>
+    
+    <script>
+        let menulist = document.querySelector('.menulist');
+
+        function add(){
+            let newTagLi = document.createElement('li');
+            let newText = document.getElementById('menu').value;
+            // console.log(newText);
+
+            let newMenu = document.createTextNode(newText);
+            console.log(newMenu);
+            newTagLi.appendChild(newMenu);
+            menulist.appendChild(newTagLi);
+
+            //추가된 메뉴를 클릭하면 해당 리스트가 삭제되는 코드
+            let listLi = document.querySelectorAll('li');
+            console.log (listLi);
+            for(let i=0 ; i < listLi.length ; i++){
+            listLi[i].onclick = function(){
+                this.remove();
+            }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

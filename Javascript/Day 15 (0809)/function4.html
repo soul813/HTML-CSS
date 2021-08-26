@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개 변수 없이 함수 전달된 값을 받아오는 arguments 변수</title>
+</head>
+<body>
+    <script>
+        function sum( a, b, c) {
+            let sum = a + b + c;
+            document.write(sum,"<br>");
+        }
+        sum(1,2,3);
+
+        function sum2( ) { //arguments
+            // let sum = a + b + c;
+            let sum = arguments [0] + arguments [1] + arguments [2];
+            document.write(sum,"<br>");
+        }
+        sum2(1,2,3);
+
+        function sum3() {
+            let sum = 0;
+            for (let i=0 ; i < arguments.length ; i++){
+                sum += arguments[i];
+                }
+            document.write(sum);
+        }
+        sum3(6,7,8,9,10);
+    </script>
+</body>
+</html>

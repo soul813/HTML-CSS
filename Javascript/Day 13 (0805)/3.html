@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜객체</title>
+</head>
+<body>
+    <h2>연말이 2021년도 12월 25일까지 몇일 남았을까?</h2>
+    <script>
+        let today = new Date();
+        let nowYear = today.getFullYear();
+        console.log (today, nowYear);
+
+        let theDate = new Date(2021,11,25);
+
+        let dTime = theDate.getTime()-today.getTime();
+        let dDay = dTime/1000/60/60/24;
+        let result = Math.ceil(dTime/1000/60/60/24);
+
+        console.log(dTime, dDay, result);
+        document.write(`크리스마스는 오늘부터 ${result}일 남았습니다.`);
+    </script>
+</body>
+</html>

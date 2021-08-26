@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심메뉴 리스트</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="점심메뉴 입력" id="menuText">
+        <button id="addBtn">등록~!</button>
+    </form>
+    <ul id="menuBox"></ul>
+
+    <script>
+        let menuText = document.getElementById('menuText');
+        let addBtn = document.getElementById('addBtn');
+        let menuBox = document.getElementById('menuBox');
+        let menuList = [];
+        let ul = document.getElementById('menuBox');
+
+        addBtn.addEventListener("click", function(e){
+            e.preventDefault();
+            let menuValue = menuText.value;
+            console.log(menuValue);
+
+            menuList.push (menuValue);
+            console.log(menuList);
+
+            menuText.value = "";
+            menuText.focus();
+
+            let li = "";
+
+            for (let i = 0 ; i < menuList.length ; i++) {
+                li += "<li>" + menuList[i] + "<span id='" + i + "'>------------ X 메뉴삭제</span>" + "</li>";
+            }
+            ul.innerHTML = li;
+
+            let delBtn = document.querySelectorAll('#menuBox>li>span');
+            for (i in delBtn) {
+                delBtn[i].addEventListener('click', removeBtn);
+            }
+
+        });
+
+        function removeBtn(){
+            let indexNum = this.getAttribute("id");
+            menuList.splice ( indexNum, 1);
+
+            let li = "";
+
+            for (let i = 0 ; i < menuList.length ; i++) {
+                li += "<li>" + menuList[i] + "<span id='" + i + "'>------------ X 메뉴삭제</span>" + "</li>";
+            }
+            ul.innerHTML = li;
+
+            let delBtn = document.querySelectorAll('#menuBox>li>span');
+            for (i in delBtn) {
+                delBtn[i].addEventListener('click', removeBtn);
+            }
+        }
+    </script>
+</body>
+</html>

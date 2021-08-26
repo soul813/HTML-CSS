@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        #box { width: 100px; height: 100px; background-color: crimson;
+               position: absolute; }
+    </style>
+    <script>
+        $(function(){
+
+            $('#box').animate({left : '500px'},1000)
+            .animate({top : '500px'},1000)
+            .animate({left : '0px'},1000)
+            .animate({top : '0px'},1000);
+
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

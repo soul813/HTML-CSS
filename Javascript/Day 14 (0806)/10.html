@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 책 예제</title>
+</head>
+<body>
+    <script>
+        let text = "Hello Thank you good luck to you";
+        let text2 = new String("Javascript");
+
+        document.write (text.charAt(16), "<br>");
+        document.write (text.indexOf("you") , "<br>");
+        document.write (text.lastIndexOf("you") , "<br>");
+        document.write (text.length , "<br>");
+        document.write (text.toUpperCase() , "<br>");
+        document.write (text.toLowerCase() , "<br>");
+        document.write (text.match ("luck"), "<br>");
+        document.write (text.search ("luck"), "<br>");
+
+        document.write (text.substr(21,4) , "<br>");
+        document.write (text.substring(21,25) , "<br>");
+        document.write (text.substring(6,11) , "<br>");
+        document.write (text.slice(21,25) , "<br>");
+        document.write (text.replace("you", "me") , "<br>");
+
+        let text3 = text.split(" ");
+        document.write (text3, "<br>");
+        document.write (text3[4], "<br>");
+
+    </script>
+</body>
+</html>
